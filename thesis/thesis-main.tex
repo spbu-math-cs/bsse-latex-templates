@@ -1,0 +1,53 @@
+\documentclass[a4paper,article,14pt]{extarticle}
+
+% Подключаем главный пакет со всем необходимым
+\usepackage{spbudiploma}
+
+% Пакеты по желанию (самые распространенные)
+% Хитрые мат. символы
+\usepackage{euscript}
+% Таблицы
+\usepackage{longtable}
+\usepackage{makecell}
+% Картинки (можно вставлять даже pdf)
+\usepackage[pdftex]{graphicx}
+
+\usepackage{amsthm,amssymb, amsmath}
+\usepackage{textcomp}
+
+\usepackage{minted} % для примеров кода (требует параметра -shell-escape)
+\usemintedstyle{bw}
+
+
+\begin{document}
+
+% Титульник в файле titlepage.tex
+\input{titlepage.tex}
+
+% Содержание
+\tableofcontents
+\pagebreak
+
+\include{items/intro}
+
+\include{items/problem}
+
+\include{items/chap1}
+
+\include{items/chap2}
+
+\include{items/chap3}
+
+\include{items/chap4}
+
+\include{items/concl}
+
+
+
+% Аргумент {1} ниже включает переопределенный стиль с выравниванием слева
+\begin{thebibliography}{1}
+\bibitem{voc} D.W. Griffin, J.S.Lim. Multiband excitation vocoder. IEEE ASSP-36 (8), 1988, pp. 1223-1235.
+\bibitem{vo2} A. Golovnev, A. S. Kulikov, I. Mihajlin. Families with Infants: Speeding Up Algorithms for NP-Hard Problems Using FFT., ACM Transactions on Algorithms, 12:3, 2016.
+\bibitem{ij-sdk} IntelliJ Platform SDK﻿. URL: \url{https://plugins.jetbrains.com/docs/intellij/welcome.html} (дата обр. 10.02.2022).
+\end{thebibliography}
+\end{document}
